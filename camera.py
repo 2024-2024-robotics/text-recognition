@@ -1,6 +1,3 @@
-# this is a development version
-# never gonna give you up
-
 import cv2
 from PIL import Image
 from pytesseract import pytesseract
@@ -18,7 +15,7 @@ while True:
     _, image = camera.read()
     cv2.imshow('Text detection', image)
 
-    if cv2.waitKey(1) & 0xFF == ord('s'):
+    if cv2.waitKey(1) & 0xFF == ord('s'):      
         tesseract()
         cv2.imwrite('test1.jpg', image)
         break
