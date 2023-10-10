@@ -9,16 +9,17 @@ def tesseract():
     image_path = "test1.jpg"
     pytesseract.tesseract_cmd = path_to_tesseract
     text = pytesseract.image_to_string(Image.open(image_path))
-    print(text)
+    print(f"The PO Box is: {text}")
 
 while True:
     _, image = camera.read()
     cv2.imshow('Text detection', image)
 
     if cv2.waitKey(1) & 0xFF == ord('s'):      
-        tesseract()
         cv2.imwrite('test1.jpg', image)
         break
+
+tesseract()
         
 camera.release()
 cv2.destroyAllWindows()
