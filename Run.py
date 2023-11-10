@@ -11,3 +11,5 @@ if os.path.exists('image.png'):
     time.sleep(1)
 
     PrintText.init()
+else:
+    print("File does not exist!")
