@@ -22,6 +22,7 @@ def init():
 
         coordinate_string = ''.join(text) 
 
-        print(coordinate_string)
+        print(coordinate_string[:2])
+        print(coordinate_string[-1:])
 
     tesseract()
